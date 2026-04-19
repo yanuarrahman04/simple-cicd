@@ -1,9 +1,9 @@
 name: CI/CD Pipeline
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   build-and-push:
     runs-on: self-hosted
@@ -55,4 +55,5 @@ jobs:
           git commit -m "Update image to ${{ github.sha }}"
           
           # Push
-          git push -f https://${GIT_TOKEN}@github.com/yanuarrahman04/simple-cicd-infra main
+          git push -f https://${GIT_TOKEN}@github.com/yanuarrahman04/simple-cicd-infra master
+          
