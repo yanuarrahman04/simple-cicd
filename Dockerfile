@@ -9,6 +9,7 @@ RUN npm install
 # Copy source code
 COPY src/ ./
 
+#port
 EXPOSE 3000
 
 CMD ["node", "app.js"]
